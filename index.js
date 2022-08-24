@@ -41,7 +41,7 @@ function addManager() {
 function addAnother() {
     inquirer.prompt([
         {
-            type: 'selectLine',
+            type: 'list',
             message: 'which would you like to add?',
             name: 'add',
             choices: ['engineer','intern','I don\'t want to add anymore!']
@@ -56,6 +56,7 @@ function addAnother() {
             return generateHTML(answers);
         }
     });
+
 }// END addAnother()
 
 function addEngineer() {
