@@ -23,48 +23,48 @@ function createHTML(team) {
 
   function generateEngineer(engineer) {
     return `
-    <section class="card col-sm">
-      <div class="card-body">
-          <h4 class="card-title">${engineer.getName()}</h4>
+    <section class="card col-xl-6">
+      <div class="card-header bg-info pt-2 pb-2">
+          <h4 class="card-title"><i class="bi bi-code"></i> ${engineer.getName()}</h4>
           <h5 class="card-subtitle">${engineer.getRole()}</h5>
-            <div class="border">
+      </div>
+            <div class="card-body bg-white">
               <p class="card-text">ID: ${engineer.getId()}</p>
               <p class="card-text">Email: ${engineer.getEmail()}</p>
               <p class="card-text">Github: ${engineer.getGithub()}</p>
             </div>
-      <div>
     </section>
     `;
   }
 
   function generateIntern(intern) {
     return `
-    <section class="card col-sm">
-      <div class="card-body">
-          <h4 class="card-title">${intern.getName()}</h4>
+    <section class="card col-xl-6">
+      <div class="card-header bg-info pt-2 pb-2">
+          <h4 class="card-title"><i class="bi bi-person"></i> ${intern.getName()}</h4>
           <h5 class="card-subtitle">${intern.getRole()}</h5>
-            <div class="border">
+      </div>
+            <div class="card-body bg-white">
                 <p class="card-text">ID: ${intern.getId()}</p>
                 <p class="card-text">Email: ${intern.getEmail()}</p>
                 <p class="card-text">School: ${intern.getSchool()}</p>
             </div>
-      <div>
     </section>
     `;
   }
 
   function generateManager(manager) {
     return `
-    <section class="card col-sm">
-      <div class="card-body">
-          <h4 class="card-title">${manager.getName()}</h4>
+    <section class="card col-xl-6">
+      <div class="card-header bg-info pt-2 pb-2">
+          <h4 class="card-title"><i class="bi bi-telephone-fill"></i> ${manager.getName()}</h4>
           <h5 class="card-subtitle">${manager.getRole()}</h5>
-              <div class="border">
+      </div>
+              <div class="card-body bg-white">
                 <p class="card-text">ID: ${manager.getId()}</p>
                 <p class="card-text">Email: ${manager.getEmail()}</p>
                 <p class="card-text">Office Nummber: ${manager.officeNumber}</p>
               </div>
-      <div>
     </section>
     `;
   }
@@ -79,7 +79,9 @@ function generateTemplateHTML(storedMembers) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap CSS only -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"><!--bootstrap icons-->
+        <!-- Bootstrap CSS-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/style.css"> <!--link to my stylesheet-->
         <title>Template HTML</title>
@@ -89,7 +91,7 @@ function generateTemplateHTML(storedMembers) {
             <h1 class="text-white">My Team</h1>
         </header>
         <section id="cardsSection" class="d-flex justify-content-center pt-5">
-          <div class="row">
+          <div class="row g-0">
             ${createHTML(storedMembers)}
           </div>
         </section>

@@ -125,7 +125,7 @@ function addIntern() {
             name: 'school',
         },
     ]).then((response) => {
-        const intern = new Intern(response.name, response.number, response.email, response.school);
+        const intern = new Intern(response.name, response.id, response.email, response.school);
         storedMembers.push(intern);
         addAnother();
     })
